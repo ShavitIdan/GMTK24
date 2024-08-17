@@ -47,7 +47,7 @@ public class Game_Manfer_Screen : MonoBehaviour
     }
     private void OnDisable()
     {
-        
+        Buttin_Screen_Press -= Change_Screen;
     }
     void Start()
     {
