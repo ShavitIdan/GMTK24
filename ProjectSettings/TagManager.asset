@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: On Table
+    uniqueID: 1629158969
+    locked: 0
+  - name: Components
+    uniqueID: 3598829347
+    locked: 0
