@@ -39,7 +39,7 @@ namespace Script_Kylee
                 if (col && col.gameObject.CompareTag(screwdriverHead))
                 {
                     Sequence s = DOTween.Sequence();
-
+                    
                     s.Append(col.gameObject.transform.DORotate(new Vector3(0f, 0f, 100f), 0.2f).SetRelative().SetLoops(5, LoopType.Incremental));
                     s.Join(col.gameObject.transform.DOScale(new Vector3(.02f, .02f, .02f), 0.2f).SetRelative().SetLoops(5, LoopType.Incremental));
                     s.OnComplete(() =>

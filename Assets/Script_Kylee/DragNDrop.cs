@@ -8,6 +8,7 @@ namespace Script_Kylee
     {
         [SerializeField] private Transform slotTransform;
         [SerializeField] private Vector3 holdOffset;
+        [SerializeField] private bool canReturn;
         private Vector3 startPosition;
         void Start()
         {
@@ -41,6 +42,9 @@ namespace Script_Kylee
             Vector3 endPosition = Vector2.Distance(transform.position, slotTransform.position) <
                                   Vector2.Distance(transform.position, startPosition) ? slotTransform.position : startPosition;
             transform.DOMove(endPosition, 0.5f);
+            
+            if(!canReturn) 
+                enabled = Vector2.Distance(transform.position, slotTransform.position) > Vector2.Distance(transform.position, startPosition);
         }
 
     }
