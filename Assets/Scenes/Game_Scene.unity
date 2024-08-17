@@ -199,7 +199,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 1
-  m_AdditionalShaderChannelsFlag: 0
+  m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
   m_SortingOrder: 0
@@ -817,6 +817,11 @@ MonoBehaviour:
   m_DeselectOnBackgroundClick: 1
   m_PointerBehavior: 0
   m_CursorLockBehavior: 0
+--- !u!1 &819597240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6916397176714320684, guid: aa039a7f781ae744c9dec4313326d887, type: 3}
+  m_PrefabInstance: {fileID: 3565060338758844196}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &947186421
 GameObject:
   m_ObjectHideFlags: 3
@@ -1501,6 +1506,10 @@ PrefabInstance:
       propertyPath: onUnscrew.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1749213794}
+    - target: {fileID: 5961473514864408354, guid: e773f2a941556cc4e83962f1d72742b6, type: 3}
+      propertyPath: onUnscrew.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 819597240}
     - target: {fileID: 8038386105662464325, guid: e773f2a941556cc4e83962f1d72742b6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.25
