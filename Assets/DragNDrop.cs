@@ -5,20 +5,22 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
+using UnityEngine.Rendering.UI;
 
 public class DragNDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler 
 {
     [SerializeField] private Transform slotTransform;
+    [SerializeField] private Vector3 holdOffset;
     private Vector3 startPosition;
     void Start()
     {
         startPosition = transform.position;
         
     }
-
+    
     void Update()
     {
-
+        
     }
 
     private void Awake()
@@ -28,13 +30,13 @@ public class DragNDrop : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDra
     public void OnDrag(PointerEventData eventData)
     {
         Vector3 currentPosition = new(eventData.pointerCurrentRaycast.worldPosition.x,eventData.pointerCurrentRaycast.worldPosition.y,0);
-        transform.position = currentPosition;
+        transform.position = currentPosition + holdOffset;
     }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
         Vector3 currentPosition = new(eventData.pointerPressRaycast.worldPosition.x,eventData.pointerPressRaycast.worldPosition.y,0);
-        transform.position = Vector3.Lerp(transform.position,currentPosition, 3f * Time.deltaTime);
+        transform.position = Vector3.Lerp(transform.position,currentPosition + holdOffset, 3f * Time.deltaTime);
     }
 
     public void OnEndDrag(PointerEventData eventData)
